@@ -1,0 +1,431 @@
+body {
+    font-family: 'Copperplate Gothic Light', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.description-content {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.description-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.description-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.description-content li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.golden-text {
+    color: goldenrod;
+}
+
+.bright-red-text {
+    color: red;
+}
+
+.input-names {
+    margin-bottom: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: center;
+}
+
+.input-wrapper {
+    position: relative;
+    line-height: 14px;
+    margin: 10px 0;
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+    text-align: left;
+}
+
+label {
+    color: #bbb;
+    font-size: 11px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+    left: 14px;
+    top: 9.8px;
+    padding: 0 2px;
+    pointer-events: none;
+    background: #000;
+    transition: transform 100ms ease;
+    transform: translateY(-20px);
+}
+
+input {
+    font-size: 13px;
+    color: #555;
+    outline: none;
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+input:invalid + label {
+    transform: translateY(0);
+}
+
+input:focus {
+    border-color: #2b96f1;
+}
+
+input:focus + label {
+    color: #2b96f1;
+    transform: translateY(-20px);
+}
+
+/* .start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: limegreen;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.75s ease;
+    font-family: 'Baskerville', serif;
+    position: relative;
+}
+
+.start-button:hover,
+.start-button:active {
+    animation: transformToBat 0.5s forwards;
+}
+
+@keyframes transformToBat {
+    0% {
+        width: 150px;
+        height: 40px;
+        background-color: limegreen;
+        color: #fff;
+        border-radius: 5px;
+    }
+    50% {
+        width: 200px;
+        height: 40px;
+        background-color: #fff5cc;
+        color: maroon;
+        border-radius: 5px;
+    }
+    100% {
+        width: 200px;
+        height: 40px;
+        background-color: #fff5cc;
+        color: maroon;
+        border-radius: 5px;
+    }
+}
+
+.start-button::before {
+    content: "";
+    position: absolute;
+    right: -66px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 40px;
+    background-color: maroon;
+    transition: all 0.5s ease;
+}
+
+.start-button:hover::before,
+.start-button:active::before {
+    width: 100px;
+    height: 20px;
+} */
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: limegreen;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.75s ease;
+    font-family: 'Baskerville', serif;
+    position: relative;
+}
+
+.start-button:hover,
+.start-button:active {
+    animation: transformToBat 0.5s forwards;
+}
+
+@keyframes transformToBat {
+    0% {
+        width: 150px;
+        height: 40px;
+        background-color: limegreen;
+        color: #fff;
+        border-radius: 5px;
+    }
+    50% {
+        width: 200px;
+        height: 40px;
+        background-color: #fff5cc;
+        color: maroon;
+        border-radius: 5px;
+    }
+    100% {
+        width: 200px;
+        height: 40px;
+        background-color: #fff5cc;
+        color: maroon;
+        border-radius: 5px;
+    }
+}
+
+.start-button::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 33%;
+    width: 0;
+    height: 33%;
+    background-color: maroon;
+    transition: all 0.5s ease;
+    border-top-right-radius: 4px; /* Round the top right corner */
+    border-bottom-right-radius: 4px; /* Round the bottom right corner */
+}
+
+.start-button:hover::before,
+.start-button:active::before {
+    width: calc(100% - 100px); /* Adjust the width to your desired end position */
+}
+
+
+
+
+/* xxxxxxxxxxxxxxxxxxx */
+.center-button {
+    display: block;
+    margin: 20px auto;
+}
+
+#game-area.hidden {
+    display: none;
+}
+
+.team {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: teal;
+    width: 100%;
+    max-width: 300px;
+    color: #000;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.players div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #e9ecef;
+    cursor: grab;
+}
+
+#current-player, #current-team {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: limegreen;
+}
+
+.hidden {
+    display: none;
+}
+
+.attempt {
+    margin-top: 50px;
+    font-size: 18px;
+    color: silver;
+}
+
+.button-54 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #CC5500;
+    cursor: wait;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+}
+
+.button-54:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+@media (min-width: 768px) {
+    .button-54 {
+        padding: 0.25em 0.75em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .team {
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .input-wrapper {
+        width: 90%;
+        max-width: none;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .description-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .description-content {
+        padding: 5px;
+    }
+
+    .description-content h2 {
+        font-size: 18px;
+    }
+
+    .description-content li {
+        font-size: 14px;
+    }
+
+    .start-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .team {
+        padding: 5px;
+    }
+
+    .players div {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .button-54 {
+        font-size: 14px;
+        padding: 0.25em 0.5em;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Cricket Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="description-box" class="overlay">
+        <div class="description-content">
+            <h2>Welcome to <span class="golden-text">CRICKET</span> <span class="bright-red-text">11</span></h2>
+            <p>Rules Are as Follows:</p>
+            <ul>
+                <li>-Both users take turns to get a player after starting the game.</li>
+                <li>-Players have skill points that convert to team's runs.</li>
+                <li>-Batsmen positions: 1-4, all-rounders: 5-7, bowlers: 8-11.</li>
+                <li>-Batsmen earn runs in batting positions, zero runs in bowling positions.</li>
+                <li>-Bowlers earn runs in bowling positions, zero runs in batting positions.</li>
+                <li>-Batsmen and bowlers in all-rounder positions earn half their skill points as runs.</li>
+                <li>-All-rounders earn runs in any position.</li>
+                <li>-The team with the most runs after 11 turns wins.</li>
+            </ul>
+            <button id="begin-button" class="start-button">Let's Begin!</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <img src="Cricket11-LOGO.jpg" alt="Cricket-11 LOGO">
+            <h1><span class="golden-text">CRICKET</span> <span class="bright-red-text">11</span></h1>
+        </div>
+        <div class="input-names">
+            <div class="input-wrapper">
+                <input type="text" id="user1-name" required>
+                <label for="user1-name">User-1 Name</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="user2-name" required>
+                <label for="user2-name">User-2 Name</label>
+            </div>
+            <button id="start-game" class="start-button">Start Game</button>
+        </div>
+        <div id="game-area" class="hidden">
+            <div class="team" id="user1-team">
+                <h2 id="user1-title"><span class="golden-text" id="user1-name-display">User 1</span>'s Team</h2>
+                <div class="players" id="user1-players"></div>
+                <p>Total Runs: <span id="user1-runs">0</span></p>
+            </div>
+            <div class="team" id="user2-team">
+                <h2 id="user2-title"><span class="golden-text" id="user2-name-display">User 2</span>'s Team</h2>
+                <div class="players" id="user2-players"></div>
+                <p>Total Runs: <span id="user2-runs">0</span></p>
+            </div>
+            <button id="get-player" class="button-54">Get a Player</button>
+            <p id="current-player">Current Player: </p>
+            <p id="current-team">Current Team: </p>
+        </div>
+        <div id="result" class="hidden"></div>
+        <div class="attempt">
+            <p>An Attempt by #WAG</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
