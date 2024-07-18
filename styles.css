@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+
 body {
     font-family: 'Copperplate Gothic Light', sans-serif;
     display: flex;
@@ -34,6 +44,7 @@ body {
     text-align: center;
     width: 100%;
     max-width: 600px;
+    font-family: "Edu QLD Beginner", cursive;
 }
 
 .description-content h2 {
@@ -104,6 +115,7 @@ body {
     display: inline-block;
     width: 100%;
     max-width: 250px;
+    font-family: "Edu VIC WA NT Beginner", cursive;
     text-align: left;
 }
 
@@ -148,70 +160,10 @@ input:focus + label {
     transform: translateY(-20px);
 }
 
-/* .start-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: limegreen;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    transition: all 0.75s ease;
-    font-family: 'Baskerville', serif;
-    position: relative;
-}
-
-.start-button:hover,
-.start-button:active {
-    animation: transformToBat 0.5s forwards;
-}
-
-@keyframes transformToBat {
-    0% {
-        width: 150px;
-        height: 40px;
-        background-color: limegreen;
-        color: #fff;
-        border-radius: 5px;
-    }
-    50% {
-        width: 200px;
-        height: 40px;
-        background-color: #fff5cc;
-        color: maroon;
-        border-radius: 5px;
-    }
-    100% {
-        width: 200px;
-        height: 40px;
-        background-color: #fff5cc;
-        color: maroon;
-        border-radius: 5px;
-    }
-}
-
-.start-button::before {
-    content: "";
-    position: absolute;
-    right: -66px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 40px;
-    background-color: maroon;
-    transition: all 0.5s ease;
-}
-
-.start-button:hover::before,
-.start-button:active::before {
-    width: 100px;
-    height: 20px;
-} */
 
 .start-button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
     background-color: limegreen;
@@ -219,7 +171,7 @@ input:focus + label {
     border: none;
     border-radius: 50px;
     transition: all 0.75s ease;
-    font-family: 'Baskerville', serif;
+    font-family: "Rubik Burned", system-ui;
     position: relative;
 }
 
@@ -261,19 +213,16 @@ input:focus + label {
     height: 33%;
     background-color: maroon;
     transition: all 0.5s ease;
-    border-top-right-radius: 4px; /* Round the top right corner */
-    border-bottom-right-radius: 4px; /* Round the bottom right corner */
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px; 
 }
 
 .start-button:hover::before,
 .start-button:active::before {
-    width: calc(100% - 100px); /* Adjust the width to your desired end position */
+    width: calc(100% - 100px); 
 }
 
 
-
-
-/* xxxxxxxxxxxxxxxxxxx */
 .center-button {
     display: block;
     margin: 20px auto;
@@ -295,10 +244,21 @@ input:focus + label {
     color: #000;
 }
 
+#user1-title, #user2-title {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 24px;
+}
+
+#user1-runs, #user2-runs, #user1-team p, #user2-team p {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 20px; 
+}
+
 .players {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
+    
 }
 
 .players div {
@@ -311,13 +271,15 @@ input:focus + label {
 #current-player, #current-team {
     margin-top: 20px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 300;
+    font-family: "Rubik Microbe", system-ui;
 }
 
 #result {
     margin-top: 30px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: 600;
     color: limegreen;
 }
 
@@ -328,11 +290,13 @@ input:focus + label {
 .attempt {
     margin-top: 50px;
     font-size: 18px;
-    color: silver;
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+    color: #C0C0C0;
 }
 
 .button-54 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Freckle Face", system-ui;
     font-size: 16px;
     letter-spacing: 2px;
     text-decoration: none;
